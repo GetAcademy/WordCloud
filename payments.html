@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let paidAmountPer = 3000;
+        let paidAmountPål = 300;
+        let paidAmountEspen = 0;
+
+        let totalPaidAmount = paidAmountPer + paidAmountPål + paidAmountEspen;
+        let costPerPerson = totalPaidAmount / 3;
+
+        let balancePer = paidAmountPer - costPerPerson;
+        let balancePål = paidAmountPål - costPerPerson;
+        let balanceEspen = paidAmountEspen - costPerPerson;
+
+        document.body.innerHTML += /*HTML*/`
+            Pers balanse: ${balancePer}<br/>
+            Påls balanse: ${balancePål}<br/>
+            Espens balanse: ${balanceEspen}<br/>
+        `;
+    </script>
+</body>
+</html>

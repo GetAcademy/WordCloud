@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <li>if-setninger</li>
+    <li>logiske verdier</li>
+    <li>sammenligningsoperatorer</li>
+    <script>
+        let wordCount = 0;
+        let previousWord = '';
+
+        addWord('Terje', 'green', 190);
+        addWord('GET Academy', 'orange', 160);
+        addWord('JavaScript', 'blue', 180);
+        addWord('HTML', 'gray', 230);
+        addWord('JavaScript', 'blue', 180);
+        addWord('HTML', 'gray', 230);
+        addWord('GET Academy', 'orange', 160);
+        addWord('Terje', 'green', 190);
+        addWord('HTML', 'gray', 230);
+        addWord('JavaScript', 'blue', 180);
+        addWord('Terje', 'green', 190);
+        addWord('GET Academy', 'orange', 160);
+        addWord('GET Academy', 'orange', 160);
+        addWord('HTML', 'gray', 230);
+        addWord('JavaScript', 'blue', 180);
+        addWord('Terje', 'green', 190);
+
+        function addWord(word, color, fontSize) {
+            wordCount++;
+            document.body.innerHTML += /*HTML*/`
+            <span style="
+                color: ${color};
+                font-size: ${fontSize}%;            
+                ">
+                ${word}                    
+            </span>
+            `;
+            if (wordCount == 3) {
+                document.body.innerHTML += '<br/>';
+                wordCount = 0;
+            }
+            previousWord = word;
+        }
+
+
+         // function addTerje(){
+        //     document.body.innerHTML += /*HTML*/`
+        //         <span style="
+        //             color: green;
+        //             font-size: 900%;
+        //             ">
+        //             Terje
+        //         </span>
+        //     `;
+        // }
+
+        // function addGetAcademy(){
+        //     document.body.innerHTML += /*HTML*/`
+        //     <span style="
+        //             color: orange;
+        //             font-size: 150%;
+        //             ">
+        //             GET Academy
+        //         </span>
+        //     `;
+        // }
+
+        /*
+        // let number; // deklarasjon
+        // number = 1; // tilordning
+        let number = 1; // deklarasjon og tilordning
+        document.body.innerHTML += `<li>${number}</li>`;
+        // number = number + 5;
+        // number += 1;
+        number++;
+        document.body.innerHTML += `<li>${number}</li>`;
+        */
+
+    </script>
+</body>
+
+</html>
